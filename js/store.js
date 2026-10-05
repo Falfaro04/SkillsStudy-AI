@@ -88,10 +88,13 @@ export async function initPersistence() {
     if (window.claude?.use) [db, user] = await Promise.all([window.claude.use('db'), window.claude.use('user')]);
   } catch { /* sin capacidades */ }
   let id = null;
+  let puedeEscribir = null;
   if (db && user) {
     try { id = await user.id(); } catch { id = null; }
+    // Quien entra por un link público solo puede leer: guarda en su navegador desde el principio.
+    try { puedeEscribir = await user.can('data.write'); } catch { puedeEscribir = null; }
   }
-  if (db && id) {
+  if (db && id && puedeEscribir !== false) {
     try {
       col = db.collection(`data/users/${id}`);
       const snap = await col.get();

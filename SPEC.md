@@ -61,7 +61,8 @@
 ### Límites conocidos del prototipo
 
 - Cada estudiante necesita una cuenta de claude.ai para usar las funciones con IA, que gastan su propio uso.
-- Para que alguien guarde sus cursos al compartirle el link, debe tener acceso de **Colaborador** o superior.
+- Para que alguien guarde sus cursos en su cuenta de claude.ai, debe tener acceso de **Colaborador** o superior.
+- Con un link público, cada visitante guarda en su propio navegador: si cambia de navegador o borra los datos del sitio, pierde sus cursos.
 
 ### Camino a la v2 (micro-SaaS real)
 
