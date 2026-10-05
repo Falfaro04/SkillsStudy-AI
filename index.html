@@ -1,3 +1,11 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Subí el programa de tu curso en PDF y armá el plan para pasarlo: calculadora de notas, quests, simulacros y técnica Feynman.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M25.5 7.5C21.5 3.5 12 3 7 8 2 13 3.5 23.5 10.5 27.5c6.5 3.5 15 1.5 18-5 2.8-5.8 1-11.5-3.5-14' fill='none' stroke='%232340b0' stroke-width='2.8' stroke-linecap='round'/%3E%3Cpath d='M10.5 16.5l4 4L22.5 11.5' fill='none' stroke='%232340b0' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<!-- artifact:inicio · lo que está entre estas marcas es lo que se publica como Artifact (tools/build_artifact.py) -->
 <title>SkillsStudy AI</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -76,7 +84,10 @@
 
 /* ---------- Base ---------- */
 *, *::before, *::after { box-sizing: border-box; }
-body { background: var(--paper); color: var(--ink); font: 400 1rem/1.55 var(--f-body); -webkit-font-smoothing: antialiased; }
+:root { padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
+img { max-width: 100%; }
+[hidden] { display: none !important; }
+body { margin: 0; background: var(--paper); color: var(--ink); font: 400 1rem/1.55 var(--f-body); -webkit-font-smoothing: antialiased; }
 h1, h2, h3 { text-wrap: balance; }
 p, li { text-wrap: pretty; }
 h1 { font: 700 clamp(1.85rem, 1.3rem + 2vw, 2.6rem)/1.08 var(--f-display); letter-spacing: -.01em; margin: 0; }
@@ -561,6 +572,10 @@ input[type="range"] { width: 100%; accent-color: var(--pen); }
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
 </style>
+<!-- artifact:fin -->
+</head>
+<body>
+<!-- artifact:inicio -->
 
 <div id="app"><div class="booting"><span class="brand brand-lg">SkillsStudy<span class="brand-ai">AI</span></span><p>Cargando…</p></div></div>
 
@@ -568,3 +583,6 @@ input[type="range"] { width: 100%; accent-color: var(--pen); }
 <script src="https://cdn.jsdelivr.net/npm/preact@10.24.3/hooks/dist/hooks.umd.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/htm@3.1.1/dist/htm.umd.js"></script>
 <script type="module" src="js/app.js"></script>
+<!-- artifact:fin -->
+</body>
+</html>

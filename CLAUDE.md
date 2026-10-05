@@ -6,7 +6,9 @@ Prototipo de micro-SaaS para estudiantes universitarios de Costa Rica: suben el 
 
 ## Cómo está hecho
 
-- Se publica como **Artifact de claude.ai**. `index.html` es solo el contenido de la página (sin `<!doctype>`, `<html>`, `<head>` ni `<body>`): el Artifact le agrega el esqueleto al publicar.
+- Se publica en dos lugares desde el mismo `index.html`, que es una página HTML completa:
+  - **Artifact de claude.ai** (https://claude.ai/artifact/Tm7tpnwsjK8YpiFY92i6ND), con IA y guardado por usuario. El Artifact recibe solo el contenido y le pone su propio esqueleto: correr `python tools/build_artifact.py`, que copia lo que está entre las marcas `<!-- artifact:inicio -->` / `<!-- artifact:fin -->` a `build/artifact.html`, y publicar ese archivo con `url` del Artifact y los `js/` que hayan cambiado en `files`. Todo lo que el Artifact necesite (título, estilos, scripts) tiene que quedar dentro de las marcas.
+  - **GitHub Pages** (https://falfaro04.github.io/SkillsStudy-AI/), desde la rama `main`, carpeta raíz. Se actualiza solo con cada push. Ahí no hay Claude ni `db`: funciona con el curso de ejemplo y el navegador.
 - Sin compilación. Preact + htm (UMD desde jsDelivr) y módulos ES en `js/`. pdf.js 3.11.174 se carga desde cdnjs solo al subir un PDF.
 - Capacidades del Artifact (declararlas al publicar): `{"sample": {}, "db": {}, "user": {}}`.
   - `sample`: llama a Claude con la cuenta de quien usa la página. Todos los prompts están en `js/ai.js`.
@@ -21,7 +23,8 @@ Prototipo de micro-SaaS para estudiantes universitarios de Costa Rica: suben el 
 - `js/ui.js`: componentes compartidos (íconos, barra "camino al aprobado", mapa de dominio, texto de Claude).
 - `js/views/`: una vista por sección (`hoy`, `plan`, `notas`, `estudiar` → `material`, `quests`, `feynman`; `simulacro`, `nuevo`).
 - `js/demo.js`: curso de ejemplo (Contabilidad I) con fechas relativas a hoy, apuntes originales y 25 preguntas.
-- `tools/dev_server.py`: servidor local que envuelve `index.html` con el esqueleto del Artifact. Está configurado como `aprobado` en `../.claude/launch.json`.
+- `tools/dev_server.py`: servidor local (como GitHub Pages, con el tipo MIME correcto para `.js` en Windows). Está configurado como `aprobado` en `../.claude/launch.json`.
+- `tools/build_artifact.py`: arma `build/artifact.html` para publicar en el Artifact (`build/` no se sube a git).
 - `tools/make_sample_pdf.py`: genera `muestras/programa-ejemplo.pdf` (programa ficticio para probar la subida).
 
 ## Convenciones

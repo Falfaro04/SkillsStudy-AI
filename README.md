@@ -15,6 +15,11 @@ Prototipo de un micro-SaaS para estudiantes universitarios: subís el programa d
 
 La especificación completa de la v1 (qué hace y qué no) está en [SPEC.md](SPEC.md).
 
+## Verla
+
+- **En GitHub Pages:** https://falfaro04.github.io/SkillsStudy-AI/. Muestra el curso de ejemplo y permite crear cursos a mano. Las funciones con IA no están disponibles aquí y los datos se guardan en tu navegador.
+- **Con IA:** como Artifact de claude.ai, para quien tenga acceso y sesión iniciada.
+
 ## Cómo está hecho
 
 - Página web publicada como Artifact de claude.ai. Usa las capacidades `sample` (llamar a Claude con la cuenta de quien la usa), `db` y `user` (guardar los cursos de cada persona en su espacio privado).
