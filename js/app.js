@@ -20,6 +20,8 @@ const RUTAS = [
 ];
 const VISTAS = { hoy: Hoy, plan: Plan, notas: Notas, estudiar: Estudiar, simulacro: Simulacro, nuevo: Nuevo };
 
+const Brand = ({ lg }) => html`<span class=${`brand${lg ? ' brand-lg' : ''}`}><${Mark} />SkillsStudy<span class="brand-ai">AI</span></span>`;
+
 const Mark = () => html`<svg class="mark" viewBox="0 0 32 32" width="28" height="28" aria-hidden="true">
   <path d="M25.5 7.5C21.5 3.5 12 3 7 8 2 13 3.5 23.5 10.5 27.5c6.5 3.5 15 1.5 18-5 2.8-5.8 1-11.5-3.5-14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" />
   <path d="M10.5 16.5l4 4L22.5 11.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" />
@@ -89,13 +91,13 @@ function Nav({ cls }) {
 
 function App() {
   if (S.boot) {
-    return html`<div class="booting"><span class="brand brand-lg"><${Mark} /> Aprobado</span><p>Abriendo tus cursos…</p></div>`;
+    return html`<div class="booting"><${Brand} lg /><p>Abriendo tus cursos…</p></div>`;
   }
   const c = cursoActual();
   const View = VISTAS[S.ruta] || Hoy;
   return html`<div class="app">
     <aside class="rail">
-      <span class="brand"><${Mark} /> Aprobado</span>
+      <${Brand} />
       <${CourseSwitcher} />
       <${Nav} cls="nav" />
       <button class="btn btn-ghost btn-sm rail-add" onClick=${nuevoCurso}><${Icon} n="mas" size=${16} /> Agregar curso</button>
@@ -106,7 +108,7 @@ function App() {
     </aside>
     <div class="main-col">
       <header class="topbar">
-        <span class="brand"><${Mark} /> Aprobado</span>
+        <${Brand} />
         <${CourseSwitcher} />
       </header>
       ${S.viendoDemo && S.ruta !== 'nuevo' ? html`<div class="demo-banner" role="note">

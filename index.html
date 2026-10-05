@@ -1,4 +1,4 @@
-<title>Aprobado</title>
+<title>SkillsStudy AI</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&family=Zilla+Slab:wght@600;700&display=swap">
@@ -159,7 +159,8 @@ input[type="range"] { width: 100%; accent-color: var(--pen); }
 /* ---------- Armazón ---------- */
 .app { display: grid; grid-template-columns: 252px minmax(0, 1fr); min-height: 100vh; }
 .rail { position: sticky; top: env(safe-area-inset-top, 0px); height: 100vh; height: 100dvh; overflow-y: auto; display: flex; flex-direction: column; gap: 18px; padding: 22px 16px 18px; border-right: 1px solid var(--rule); background: var(--sheet); }
-.brand { display: inline-flex; align-items: center; gap: 8px; font: 700 1.45rem/1 var(--f-display); color: var(--ink); letter-spacing: -.01em; }
+.brand { display: inline-flex; align-items: center; gap: 8px; font: 700 1.45rem/1 var(--f-display); color: var(--ink); letter-spacing: -.01em; white-space: nowrap; }
+.brand-ai { font: 700 .58em/1 var(--f-body); letter-spacing: .06em; padding: .32em .45em; border-radius: 6px; background: var(--pen); color: var(--pen-ink); margin-left: -2px; }
 .brand-lg { font-size: 2.2rem; }
 .mark { color: var(--pen); }
 .nav { display: flex; flex-direction: column; gap: 2px; }
@@ -561,7 +562,7 @@ input[type="range"] { width: 100%; accent-color: var(--pen); }
 }
 </style>
 
-<div id="app"><div class="booting"><span class="brand brand-lg">Aprobado</span><p>Cargando…</p></div></div>
+<div id="app"><div class="booting"><span class="brand brand-lg">SkillsStudy<span class="brand-ai">AI</span></span><p>Cargando…</p></div></div>
 
 <script src="https://cdn.jsdelivr.net/npm/preact@10.24.3/dist/preact.umd.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/preact@10.24.3/hooks/dist/hooks.umd.js"></script>

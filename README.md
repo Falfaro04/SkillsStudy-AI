@@ -1,6 +1,6 @@
 # SkillsStudy AI
 
-Prototipo de un micro-SaaS para estudiantes universitarios: subís el programa del curso en PDF y la app arma el camino para pasarlo. Dice qué estudiar cada semana, cuánto necesitás sacar y cómo practicar lo que más pesa. El nombre del prototipo dentro de la app es **Aprobado**.
+Prototipo de un micro-SaaS para estudiantes universitarios: subís el programa del curso en PDF y la app arma el camino para pasarlo. Dice qué estudiar cada semana, cuánto necesitás sacar y cómo practicar lo que más pesa.
 
 ## Qué hace
 

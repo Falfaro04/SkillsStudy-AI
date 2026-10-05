@@ -14,7 +14,7 @@ LEFT, TOP, BOTTOM = 56, 740, 60
 # (tipo, contenido). Tipos: h1, h2, p, row (columnas), gap
 DOC = [
     ('h1', 'Programa del curso: Matemática General'),
-    ('p', 'Universidad de Ejemplo · Escuela de Ciencias Exactas · Documento ficticio para probar Aprobado'),
+    ('p', 'Universidad de Ejemplo · Escuela de Ciencias Exactas · Documento ficticio para probar SkillsStudy AI'),
     ('p', 'Código: MA-101 · Créditos: 3 · II cuatrimestre 2026 · Modalidad a distancia con tutorías presenciales'),
     ('gap', ''),
     ('h2', '1. Descripción'),

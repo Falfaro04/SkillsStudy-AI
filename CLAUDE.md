@@ -1,4 +1,6 @@
-# Aprobado
+# SkillsStudy AI
+
+La carpeta y algunas claves internas (`aprobado:v1` en el navegador, el resaltado `aprobado`) conservan el nombre original del prototipo, "Aprobado". No se cambian porque así no se pierden datos guardados.
 
 Prototipo de micro-SaaS para estudiantes universitarios de Costa Rica: suben el programa del curso en PDF y la app arma el plan para pasarlo. La especificación de la v1 (qué hace y qué no) está en [SPEC.md](SPEC.md).
 

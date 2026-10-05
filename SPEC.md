@@ -1,4 +1,4 @@
-# Aprobado — especificación de la v1 (prototipo)
+# SkillsStudy AI — especificación de la v1 (prototipo)
 
 **Una frase:** el estudiante sube el programa de su curso en PDF y la app le arma el camino para pasarlo: qué estudiar cada semana, cuánto necesita sacar y cómo practicar lo que más pesa.
 

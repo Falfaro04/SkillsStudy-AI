@@ -1,4 +1,4 @@
-"""Servidor local para probar Aprobado.
+"""Servidor local para probar SkillsStudy AI.
 
 Envuelve index.html con el mismo esqueleto que agrega el Artifact al publicar,
 así la página se ve igual que en claude.ai. Fuera de claude.ai no hay Claude ni
@@ -49,5 +49,5 @@ class Handler(http.server.SimpleHTTPRequestHandler):
 
 if __name__ == '__main__':
     with http.server.ThreadingHTTPServer(('127.0.0.1', PORT), Handler) as httpd:
-        print(f'Aprobado en http://127.0.0.1:{PORT}', flush=True)
+        print(f'SkillsStudy AI en http://127.0.0.1:{PORT}', flush=True)
         httpd.serve_forever()

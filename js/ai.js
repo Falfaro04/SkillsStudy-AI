@@ -23,7 +23,7 @@ export function mensajeError(e) {
     case 'refused': return 'Claude no respondió a esta solicitud. Probá con otro texto.';
     case 'empty_completion': return 'Claude no devolvió nada. Probá con una solicitud más corta.';
     case 'invalid_json': return 'La respuesta llegó incompleta. Probá de nuevo.';
-    case 'sin_ia': return 'Las funciones con Claude solo están disponibles al abrir Aprobado en claude.ai con tu sesión iniciada.';
+    case 'sin_ia': return 'Las funciones con Claude solo están disponibles al abrir SkillsStudy AI en claude.ai con tu sesión iniciada.';
     default: return 'Se cortó la conexión con Claude. Probá de nuevo.';
   }
 }
